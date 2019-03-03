@@ -463,7 +463,7 @@ padding: 0
 .single-wc-content{
 	float: left;
 	display: inline;
-	width: 100%;
+	width: 99%;
 }
 .single-wc-content span {
 	border-radius: 100%;
