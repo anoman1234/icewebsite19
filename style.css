@@ -150,7 +150,7 @@ img{
 .scrollToTop {
   background: #f9f9f9 none repeat scroll 0 0;
     border-radius: 50%;
-    bottom: 84px;
+    bottom: 30px;
     display: none;
     font-size: 25px;
     height: 55px;
@@ -703,7 +703,7 @@ padding: 0
 	width: 100%;
 }
 .call-to-overlay{
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0,0,0,0.8);
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -2536,7 +2536,7 @@ padding: 0
 	  width: 104.5%;
 	}
 	.main-nav {
-	  background: #ccc none repeat scroll 0 0;
+	  background: #f7f7f7 none repeat scroll 0 0;
 	  display: block;
 	  margin: 0;
 	  text-align: center;
@@ -2550,8 +2550,8 @@ padding: 0
 	}
 	.navbar-default .navbar-toggle:hover,
 	.navbar-default .navbar-toggle:focus{
-		background-color: #00d999;
-		border-color: #00d999;
+		background-color: #035AA3;
+		border-color: #035AA3;
 		color: #fff;
 	}
 	.navbar-default .navbar-toggle:hover .icon-bar,
