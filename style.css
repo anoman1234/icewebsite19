@@ -123,6 +123,10 @@ img{
 	bottom: 0;
 	right: 0;
 }
+
+.digital_tv{
+  padding-bottom: 70px;
+}
 @-webkit-keyframes load3 {
   0% {
     -webkit-transform: rotate(0deg);
