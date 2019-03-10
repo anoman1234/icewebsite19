@@ -124,8 +124,12 @@ img{
 	right: 0;
 }
 
+@media (max-width:520px) {
+
 .digital_tv{
   padding-bottom: 70px;
+}
+
 }
 @-webkit-keyframes load3 {
   0% {
