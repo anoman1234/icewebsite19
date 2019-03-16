@@ -133,7 +133,7 @@
   <!-- End blog banner section -->
 
 <!-- new codes -->
-<section id="hvac">
+<section id="airtime_page" class="airtime-bottom">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -173,36 +173,101 @@
 <!-- new codes ends -->
 
 
-
+<!-- Start Footer -->
 <footer id="footer">
+
   <div class="footer-bottom">
     <p>Copyright © 2019. All rights reserved by ICE Technologies Ltd.</a></p>
   </div>
 </footer>
-  <!-- End blog section -->
+<!-- End Footer -->
 
-  <!-- Start Footer -->
-  <!-- Start Footer -->
 
-  <!-- End Footer -->
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <!-- Bootstrap -->
-  <script src="assets/js/bootstrap.js"></script>
-  <!-- Slick Slider -->
-  <script type="text/javascript" src="assets/js/slick.js"></script>
-  <!-- Counter -->
-  <script type="text/javascript" src="assets/js/waypoints.js"></script>
-  <script type="text/javascript" src="assets/js/jquery.counterup.js"></script>
-  <!-- mixit slider -->
-  <script type="text/javascript" src="assets/js/jquery.mixitup.js"></script>
-  <!-- Add fancyBox -->
-  <script type="text/javascript" src="assets/js/jquery.fancybox.pack.js"></script>
-  <!-- Wow animation -->
-  <script type="text/javascript" src="assets/js/wow.js"></script>
+<!-- initialize jQuery Library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!-- Bootstrap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!-- Slick Slider -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+<!-- Counter -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+<!-- mixit slider -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
+<!-- Add fancyBox -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<!-- Wow animation -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/ajax-loader.gif"</script> -->
 
-  <!-- Custom js -->
-  <script type="text/javascript" src="assets/js/custom.js"></script>
-  </body>
-</html>
+<!-- Custom js -->
+<script type="text/javascript" src="assets/js/custom.js"></script>
+<script type="text/javascript">
+    function sendEmail(){
+          // get user input
+          var name= $("#name").val();
+          var email = $("#email").val();
+          var msg = $("#msg").val();
+
+        //  $('#btn').html('<img style="margin-left:100px" src="http://iceapps.org/dev/icebd/assets/images/Loading%20progress.gif">');
+                    // prepare params
+      if(name!=''){
+          if(email!=''){
+              if(msg!=''){
+                  var param = {"email":email, "name":name,"msg":msg};
+                // console.log(param);
+                //sending request
+                $.ajax({
+                url: "http://beep.life/cron/feedbackEmail.php",
+                timeout: 15000,
+                type: 'POST',
+                dataType: "json",
+                data: param,
+
+                success: function(data) {
+              //  $('btn').html('<button type="button" data-text="SUBMIT" onclick="sendEmail()" class="button button-default whitebtn"><span>SUBMIT</span></button>');
+                console.log("success");
+                console.log(data);
+                // show alert
+                 $('#note').html("Thanks for your feedback");
+                $('#note').show(2000);
+                  $("#name").val('');
+                $("#email").val('');
+                $("#msg").val('');
+                },
+                error: function(data) {
+                //  $('btn').html('<button type="button" data-text="SUBMIT" onclick="sendEmail()" class="button button-default whitebtn"><span>SUBMIT</span></button>');
+                  console.log("success");
+                  console.log(data);
+                  // show alert
+                   $('#note').html("Thanks for your feedback");
+                  $('#note').show(2000);
+                  $("#name").val('');
+                $("#email").val('');
+                $("#msg").val('');
+                }
+                });
+              }else{
+                  $('#msg').css("border","1px solid #f13939");
+                  $('#note').html("Please write some message");
+                  $('#note').show(2000);
+              }
+          }else{
+              $('#email').css("border","1px solid #f13939");
+              $('#note').html("Please enter your email");
+              $('#note').show(2000);
+          }
+      }else{
+          $('#name').css("border","1px solid #f13939");
+          $('#note').html("Please enter your name");
+          $('#note').show(2000);
+      }
+
+
+
+    }
+
+</script>
+</body>
+</html

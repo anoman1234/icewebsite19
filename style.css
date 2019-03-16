@@ -74,7 +74,6 @@ img{
 }
 
 
-
 /* Preloader */
 
 #preloader {
@@ -920,6 +919,14 @@ padding: 0
 /*--------------------*/
 /* HVAC */
 /*--------------------*/
+#airtime_page{
+  background-color: #F6F6F6;
+  float: left;
+  display: inline;
+  padding: 70px 0;
+  width: 100%;
+  margin-bottom: 71px !important;
+}
 
 #hvac {
     background-color: #F6F6F6;
