@@ -74,6 +74,7 @@ img{
 }
 
 
+
 /* Preloader */
 
 #preloader {
@@ -122,6 +123,18 @@ img{
 	left: 0;
 	bottom: 0;
 	right: 0;
+}
+
+
+
+.airtime_title{
+  padding-bottom: 20px;
+  padding-top: 40px;
+}
+@media(min-width: 991px){
+  .recharge_navbar{
+    margin-bottom:-75px;
+  }
 }
 
 @media (max-width:520px) {
@@ -2642,7 +2655,7 @@ padding: 0
 	  margin-bottom: 30px;
 	}
 	#blog-banner {
-	  margin-top: 0px;
+	  margin-top: -72px;
 	}
 	.instagram-feed .slick-prev {
 	  left: 39%;
